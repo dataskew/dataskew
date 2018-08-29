@@ -21,8 +21,11 @@ Go to the [DataSkew dev portal](https://dataskew.portal.azure-api.net), sign in 
 #### How many API keys can I get per pricing tier subscription?
 Currently we only issue 1 API key per pricing tier subscription.
 
-#### Are there any restrictions on API usage?
-Yes, please check out [this section](./#pricing) to see what restrictions apply to the pricing tier that you're subscribed to.
+#### Are there any usage quotas?
+Yes, usage quota restrictions apply. The specifics depend on the [pricing tier you're subscribed to](./#pricing).
+
+#### Is rate limiting enforced?
+Yes, to prevent DoS incidents, the APIs are rate limited. The specifics depend on the [pricing tier you're subscribed to](./#pricing).  
 
 #### Can I share my API key with others?
 Technically you can, but it is not a good idea. Usage & metrics are tracked at API key level. Any subsequent quotas/restrictions will also apply at API key level. So best not to share your API keys with anyone else.

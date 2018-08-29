@@ -7,11 +7,11 @@ DataSkew's REST APIs provide developers with access to time-series and cross-sec
 <br>
 ### Pricing
 
-|Subscription|Pricing|APIs Available|Restrictions
-|------------|-------|--------------|------------
-|Free Tier|Free|[Limited set](https://dataskew.portal.azure-api.net/products/free-tier)|TBA
-|Standard Tier <sup>(coming soon)<sup>|TBA|TBA|TBA
-|Enterprise Tier <sup>(coming soon)<sup>|TBA|TBA|TBA
+|Subscription|Pricing|APIs Available|Quota|Rate Limit
+|------------|-------|--------------|-----|----------
+|Preview Tier|Free|[Limited set](https://dataskew.portal.azure-api.net/products/free-tier)|1000 calls/day|10 calls/minute
+|Standard Tier <sup>(coming soon)<sup>|TBA|TBA|TBA|TBA
+|Enterprise Tier <sup>(coming soon)<sup>|TBA|TBA|TBA|TBA
 
 <br>
 ### APIs available now
