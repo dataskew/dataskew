@@ -33,7 +33,4 @@ Technically you can, but it is not a good idea. Usage & metrics are tracked at A
 #### Do you have any code samples?
 Yes, please check [this page](./code-samples) out for details.
 
-<br>
-_Please also check out our main [FAQs](./faqs) page._
-
 ------------------------------

@@ -25,7 +25,7 @@ DataSkew's REST APIs provide developers with access to time-series and cross-sec
 
 |Dataset|Category|Scope|Release Date (approx)
 |-------|--------|-----|---------------------
-|[World Bank](https://en.wikipedia.org/wiki/World_Bank)|Economics|Global|Aug 31, 2018
+|[World Bank](https://en.wikipedia.org/wiki/World_Bank)|Economics|Global|Sep 7, 2018
 |[Indian Government](https://en.wikipedia.org/wiki/Government_of_India)|Various|India|Sep 21, 2018
 |[United Nations](https://en.wikipedia.org/wiki/United_Nations)|Economics|Global|TBA
 |[RBI](https://en.wikipedia.org/wiki/Reserve_Bank_of_India)|Economics, Finance|India|TBA

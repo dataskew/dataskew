@@ -48,6 +48,9 @@ Some headers and query params commonly used in DataSkew API calls are summarized
 Please note that this list is not comprehensive/exhaustive.
 
 #### Authentication
+Authenticated requests are not required if you're subscribed to the preview tier (however you are required to [specify your API key](#making-your-first-apicall)). 
+
+The other subscription tiers however will require all calls to be authenticated (details TBA).
 
 #### Paging
 Server-side paging is supported. 
@@ -103,8 +106,7 @@ Yes, you can use the API console on the DataSkew dev portal. @Todo
 #### Do you also have an Java/C#/Python/JS SDK?
 Not yet. Currently, we only have REST APIs. But we plan to ship SDKs in the future. Please watch this space.
 
-
-<br>
-_Please also check out our main [FAQs](./faqs) page._
+#### Can I retrieve the data in XML format?
+Currently, we only support **```content-type: applicaton/json```**. Support for XML might be added later in the future.
 
 ------------------------------
