@@ -37,6 +37,6 @@ DataSkew's REST APIs provide developers with access to time-series and cross-sec
 
 <br>
 ### Awesome! How do I get access?
-[Click here to subscribe and get your API keys](./get-api-keys).
+[Click here to subscribe and get your API keys](./api-keys).
 
 ------------------------------

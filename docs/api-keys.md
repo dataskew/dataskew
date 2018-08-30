@@ -31,6 +31,6 @@ Yes, to prevent DoS incidents, the APIs are rate limited. The specifics depend o
 Technically you can, but it is not a good idea. Usage & metrics are tracked at API key level. Any subsequent quotas/restrictions will also apply at API key level. So best not to share your API keys with anyone else.
 
 #### Do you have any code samples?
-Yes, please check [this page](./code-samples) out for details.
+Yes, please check [this page](./api-usage) out for details.
 
 ------------------------------

@@ -6,7 +6,7 @@
 <br>
 ## Prerequisites
 We're assuming that you have: 
-* An active subscription to a [pricing tier](./#pricing) and a valid API key. [If not, please follow the steps here](./get-api-keys).
+* An active subscription to a [pricing tier](./#pricing) and a valid API key. [If not, please follow the steps here](./api-keys).
 * You've installed tools that'll enable you to make API calls: curl or [postman](https://www.getpostman.com/) or [fiddler](https://www.telerik.com/fiddler). And that you have familiarity with those tools.
 
 <br>
@@ -22,10 +22,10 @@ Let's assume your subscription (and API key) gives you access to the [AMFI APIs]
 ocp-apim-subscription-key: {your api key}
 ```
 3. Make the API call.
-![Sending GET request to DataSkew server](./images/code-samples-1.jpg)
+![Sending GET request to DataSkew server](./images/api-usage-1.jpg)
 
 4. The server sends the response in JSON format.
-![Getting response from DataSkew server](./images/code-samples-2.jpg)
+![Getting response from DataSkew server](./images/api-usage-2.jpg)
 
 
 <br>
@@ -48,7 +48,7 @@ Some headers and query params commonly used in DataSkew API calls are summarized
 Please note that this list is not comprehensive/exhaustive.
 
 #### Authentication
-Authenticated requests are not required if you're subscribed to the preview tier (however you are required to [specify your API key](#making-your-first-apicall)). 
+Authenticated requests are not required if you're subscribed to the preview tier (however you are required to [specify your API key](#making-your-first-api-call)). 
 
 The other subscription tiers however will require all calls to be authenticated (details TBA).
 
@@ -58,7 +58,7 @@ Server-side paging is supported.
 * If the collection being returned has more than 1000 items, then the API returns the collection in chunks/pages of 1000 items each (note: this number is not configurable at present).
 
 * The response headers will then contain **```x-ds-continuationtoken```**, which is a continuation token required to fetch the next chunk. Note that this token value is opaque and changes on each subsequent chunk.  
-![In case of paging, the server response contains a continuation token in the header](./images/code-samples-3.jpg)
+![In case of paging, the server response contains a continuation token in the header](./images/api-usage-3.jpg)
 
 * In order to retrieve the next chunk, the client must set the **```continuationtoken```** query parameter to the value returned by the **```x-ds-continuationtoken```** header in the previous chunk:
 ```
@@ -66,7 +66,7 @@ Server-side paging is supported.
 ```
 
 * Now make the API call. 
-![Specify the continuation token value as query string parameter in next call](./images/code-samples-4.jpg)
+![Specify the continuation token value as query string parameter in next call](./images/api-usage-4.jpg)
 
 * If the server response again includes a **```x-ds-continuationtoken```** header, then it means that there are one or more chunks in the collection. Else, this is the last chunk. 
 
@@ -74,7 +74,7 @@ Server-side paging is supported.
 Server-side filtering support is provided only for APIs dealing with time-series data. 
 
 * The **```startdate```** and **```enddate```** query parameters can be used in API calls to limit the range of time-series data being extracted.
-![Use query parameters to filter the time-series data](./images/code-samples-5.jpg)
+![Use query parameters to filter the time-series data](./images/api-usage-5.jpg)
 
 * You can use any of the following formats while specifying the **```startdate```** and **```enddate```** query parameters:
 

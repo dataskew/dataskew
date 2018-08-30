@@ -165,6 +165,9 @@ namespace DataSkew.CodeSamples.AMFI
             Console.Clear();
         }
 
+        /// <remarks>
+        /// We're assuming that API key is tied to Preview-tier, hence no authorization needed.
+        /// </remarks>
         public static async Task Main()
         {
             httpClient.DefaultRequestHeaders.Add(apiKeyHeaderName, apiKeyHeaderValue);

@@ -7,10 +7,10 @@
 
 |Frequently asked questions on
 |-----------------------------
-|[API keys](./get-api-keys#faqs-on-api-keys)
-|[Code samples](./code-samples#faqs-on-code-samples)
+|[API keys](./api-keys#faqs-on-api-keys)
+|[Code samples](./api-usage#faqs-on-api-usage)
 
 <br>
-_In case you're encountering problems, please check our list of  [known issues](@Todo)._
+_In case you're encountering problems, please check our list of  [known issues](https://github.com/dataskew/dataskew/issues)._
 
 ------------------------------
