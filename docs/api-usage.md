@@ -1,5 +1,5 @@
 # API Usage
-@Todo
+This page will help you navigate the process of making your first DataSkew API call along with providing an overview of commonly used patterns in DataSkew API  (headers, paging, auth, filtering etc).
 
 ------------------------------
 
@@ -94,14 +94,11 @@ Server-side filtering support is provided only for APIs dealing with time-series
 #### Sorting
 At present, server-side sorting is not supported. You'll have to sort the data on the client-side.
 
-#### OpenAPI (swagger) definitions
-@Todo
-
 <br>
 ## FAQs on code samples
 
 #### Can I test the APIs without writing code (or using curl)?
-Yes, you can use the API console on the DataSkew dev portal. @Todo
+Yes, you can use the API console on the [DataSkew dev portal](https://dataskew.portal.azure-api.net/docs/services/). Click on the "Try it" button. You'll be required to have an active subscription to a [pricing tier](./#pricing) and a valid API key. Any calls you make on the API console will count towards your [usage quota](./#pricing).
 
 #### Do you also have an Java/C#/Python/JS SDK?
 Not yet. Currently, we only have REST APIs. But we plan to ship SDKs in the future. Please watch this space.
