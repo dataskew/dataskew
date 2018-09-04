@@ -17,7 +17,7 @@ Let us start with a very simple example.
 
 Let's assume your subscription (and API key) gives you access to the [AMFI APIs](./apis-amfi). Say, you're interested in fetching the list of AMCs (asset management companies) registered with AMFI. 
 
-1. Figure out the API url to call: @Todo
+1. Figure out the API url to call. You can use the [API console](https://dataskew.portal.azure-api.net/docs/services/) on our [developer portal](https://dataskew.portal.azure-api.net/) for this purpose.
 
 2. Set your API key in the request header as follows:
 ```
