@@ -1,5 +1,7 @@
 # API Usage
-This page will help you navigate the process of making your first DataSkew API call along with providing an overview of commonly used patterns in DataSkew API  (headers, paging, auth, filtering etc).
+Now that you have your API key, this page will help you navigate the process of making your first DataSkew API call. 
+
+You'll also get an overview of common usage patterns in DataSkew APIs  (headers, paging, auth, filtering etc).
 
 ------------------------------
 
