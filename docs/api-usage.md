@@ -103,7 +103,13 @@ At present, server-side sorting is not supported. You'll have to sort the data o
 Yes, [click here](https://github.com/dataskew/dataskew/tree/master/code-samples).
 
 #### Can I test the APIs without writing code (or using curl)?
-Yes, you can use the API console on the [DataSkew dev portal](https://dataskew.portal.azure-api.net/docs/services/). Click on the "Try it" button. You'll be required to have an active subscription to a [pricing tier](./#pricing) and a valid API key. Any calls you make on the API console will count towards your [usage quota](./#pricing).
+Yes, you can use the [API console](https://dataskew.portal.azure-api.net/docs/services/) on the [DataSkew dev portal](https://dataskew.portal.azure-api.net/docs/services/). 
+
+Click on the "Try it" buttons to test out any APIs. 
+
+  ![Click on the try it button](./images/api-usage-6.jpg)
+
+You're required to have an active subscription to a [pricing tier](./#pricing) and a valid API key. Any calls you make on the API console will count towards your [usage quota](./#pricing).
 
 #### Do you also have an Java/C#/Python/JS SDK?
 Not yet. Currently, we only have REST APIs. But we plan to ship SDKs in the future. Please watch this space.

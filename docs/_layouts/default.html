@@ -17,24 +17,23 @@
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
         
         {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" />
+          <a href="./"><img src="{{site.logo | relative_url}}" alt="Logo" /></a>
         {% endif %}        
 
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
-
+        <p></p>
+        
         <hr>
 
         <h3>Quick links</h3>
+        <p>Landing Pages: <a href="./">Home</a> | <a href="https://dataskew.portal.azure-api.net">Dev Portal</a></p>
         <p>Get Started: <a href="./api-keys">API keys</a> | <a href="./api-usage">API usage</a></p>
-        <p>Problems?: <a href="https://github.com/dataskew/dataskew/issues">Known issues</a> | <a href="https://github.com/dataskew/dataskew/tree/master/code-samples">Sample code</a></p>
-        <p>APIs: <a href="./apis-amfi">AMFI</a></p>
+        <p>Problems?: <a href="https://github.com/dataskew/dataskew/issues">Github issues</a> | <a href="https://github.com/dataskew/dataskew/tree/master/code-samples">Sample code</a></p>
         <p>Contact us: <a href="http://bit.ly/dataskewslack">Slack</a></p>
 
         <hr>
 
-        <h3>Coming soon</h3>
-        <p>Planning: Roadmap | Blog</p>
-        <p>Miscellaneous: FAQs | Release notes</p>
+        <h3>APIs</h3>
+        <p><a href="./apis-amfi">AMFI</a></p>
       </header>
       <section>
 
