@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "bd043298-c059-40be-bd90-90a732857719",
+		"name": "DataSkew: AMFI API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List all AMCs",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8a995baf-af98-49fd-ae6f-3b0fd1aa4717",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "",
+						"description": "Replace with your API key"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dataskew.azure-api.net/api/amfi/AMCs",
+					"protocol": "https",
+					"host": [
+						"dataskew",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"api",
+						"amfi",
+						"AMCs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch specific AMC",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "",
+						"description": "Replace with your API key"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dataskew.azure-api.net/api/amfi/AMCs/35",
+					"protocol": "https",
+					"host": [
+						"dataskew",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"api",
+						"amfi",
+						"AMCs",
+						"35"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all scheme types",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8a995baf-af98-49fd-ae6f-3b0fd1aa4717",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "YOUR-API-KEY",
+						"description": "Replace with your API key"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dataskew.azure-api.net/api/amfi/schemetypes",
+					"protocol": "https",
+					"host": [
+						"dataskew",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"api",
+						"amfi",
+						"schemetypes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch specific scheme type",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "",
+						"description": "Replace with your API key"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dataskew.azure-api.net/api/amfi/schemetypes/2",
+					"protocol": "https",
+					"host": [
+						"dataskew",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"api",
+						"amfi",
+						"schemetypes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all scheme categories",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8a995baf-af98-49fd-ae6f-3b0fd1aa4717",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "",
+						"description": "Replace with your API key"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dataskew.azure-api.net/api/amfi/schemecategories",
+					"protocol": "https",
+					"host": [
+						"dataskew",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"api",
+						"amfi",
+						"schemecategories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch specific scheme category",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "",
+						"description": "Replace with your API key"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dataskew.azure-api.net/api/amfi/schemecategories/9",
+					"protocol": "https",
+					"host": [
+						"dataskew",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"api",
+						"amfi",
+						"schemecategories",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch schemes for specific AMC",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "",
+						"description": "Replace with your API key"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dataskew.azure-api.net/api/amfi/AMCs/9/schemes",
+					"protocol": "https",
+					"host": [
+						"dataskew",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"api",
+						"amfi",
+						"AMCs",
+						"9",
+						"schemes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

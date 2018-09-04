@@ -126,8 +126,8 @@ namespace DataSkew.CodeSamples.AMFI
         {
             // fetching all NAVs for Scheme with id = 100038 
             // (Aditya Birla Sun Life Income Fund : Aditya Birla Sun Life Income Fund - Growth - Regular Plan)
-            Console.WriteLine("Fetching NAVs for AMC with id = 9");
-            Console.WriteLine("---------------------------------");
+            Console.WriteLine("Fetching NAVs for scheme with id = 100038");
+            Console.WriteLine("-----------------------------------------");
 
             var continuationToken = string.Empty;
             do
