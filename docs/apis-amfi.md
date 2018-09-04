@@ -7,7 +7,8 @@ Fetch time-series NAV data from all AMC schemes registered with the [Association
 ## Prerequisites
 We're assuming that: 
 * You have an active subscription to a [pricing tier](./#pricing) and a valid API key. [If not, please follow the steps here](./api-keys).
-* You have read the documentation on usage patterns in DataSkew APIs. [If not, please take a couple of minutes to do so](./api-usage).
+* You have read the documentation on [usage patterns in DataSkew APIs](./api-usage).
+* You have seen the [sample code](https://github.com/dataskew/dataskew/tree/master/code-samples) on github.
 
 <br>
 ## Common operations
@@ -38,6 +39,9 @@ We're assuming that:
 
 <br>
 ## FAQs on AMFI APIs
+
+#### Have you shared out any sample code on github?
+Yes, [click here](https://github.com/dataskew/dataskew/tree/master/code-samples/AMFI).
 
 #### What information is currently unavailable from the AMFI data sets?
 Currently, we only provide time-series NAV data for all mutual fund schemes and asset management companies (AMCs) registered with AMFI. The AMFI API does not provide the following data:
