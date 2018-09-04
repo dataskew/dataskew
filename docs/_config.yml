@@ -1,3 +1,4 @@
 theme: jekyll-theme-minimal
 repository: dataskew/dataskew
-show_downloads: "true"
+show_downloads: true
+logo: images/logo-200x200.jpg
