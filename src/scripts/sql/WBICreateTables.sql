@@ -152,7 +152,7 @@ GO
 
 -- WBI staging tables --
 
-CREATE TABLE WBIStaging_WBICatalogSources
+CREATE TABLE WBIStaging_CatalogSources
 (
     Id
         int
@@ -177,7 +177,7 @@ CREATE TABLE WBIStaging_WBICatalogSources
 )
 GO
 
-CREATE TABLE WBIStaging_WBICountries
+CREATE TABLE WBIStaging_Countries
 (
     Id
         varchar(3)
@@ -214,7 +214,7 @@ CREATE TABLE WBIStaging_WBICountries
 )
 GO
 
-CREATE TABLE WBIStaging_WBIIncomeLevels
+CREATE TABLE WBIStaging_IncomeLevels
 (
     Id
         varchar(3)
@@ -229,7 +229,7 @@ CREATE TABLE WBIStaging_WBIIncomeLevels
 )
 GO
 
-CREATE TABLE WBIStaging_WBIIndicators
+CREATE TABLE WBIStaging_Indicators
 (
     Id
         varchar(64)
@@ -252,7 +252,7 @@ CREATE TABLE WBIStaging_WBIIndicators
 )
 GO
 
-CREATE TABLE WBIStaging_WBILendingTypes
+CREATE TABLE WBIStaging_LendingTypes
 (
     Id
         varchar(3)
@@ -267,7 +267,7 @@ CREATE TABLE WBIStaging_WBILendingTypes
 )
 GO
 
-CREATE TABLE WBIStaging_WBIRegions
+CREATE TABLE WBIStaging_Regions
 (
     Code
         varchar(3)
@@ -284,7 +284,7 @@ CREATE TABLE WBIStaging_WBIRegions
 )
 GO
 
-CREATE TABLE WBIStaging_WBITopics
+CREATE TABLE WBIStaging_Topics
 (
     Id
         int
