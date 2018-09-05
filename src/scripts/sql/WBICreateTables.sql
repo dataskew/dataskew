@@ -97,9 +97,7 @@ CREATE TABLE WBIIndicators
     SourceOrganization
         varchar(2048),
     Unit
-        varchar(10),
-    LastETLUpdate
-        datetime
+        varchar(10)
 )
 GO
 
@@ -246,9 +244,7 @@ CREATE TABLE WBIStaging_Indicators
     SourceOrganization
         varchar(2048),
     Unit
-        varchar(10),
-    LastETLUpdate
-        datetime
+        varchar(10)
 )
 GO
 
