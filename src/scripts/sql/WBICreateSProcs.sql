@@ -112,6 +112,32 @@ MERGE [WBIIndicators] as target1
 DELETE FROM [WBIStaging_Indicators];
 GO
 
+CREATE PROCEDURE uspUpsertWBIIndicatorData
+AS
+MERGE [WBIIndicatorData] as target1
+	USING [WBIStaging_IndicatorData] as staging1
+	ON target1.IndicatorId = staging1.IndicatorId AND target1.CountryId = staging1.CountryId AND target1.IndicatorDataDate = staging1.IndicatorDataDate
+	WHEN MATCHED THEN
+		UPDATE SET
+			target1.IndicatorDataValue = staging1.IndicatorDataValue,
+			target1.Unit = staging1.Unit,
+			target1.ObsStatus = staging1.ObsStatus,
+			target1.IndicatorDataDecimal = staging1.IndicatorDataDecimal
+	WHEN NOT MATCHED BY TARGET THEN
+		INSERT
+		VALUES
+		(
+			IndicatorId,
+			CountryId,
+			IndicatorDataDate,
+			IndicatorDataValue,
+			Unit,
+			ObsStatus,
+			IndicatorDataDecimal
+		);
+DELETE FROM [WBIStaging_IndicatorData];
+GO
+
 CREATE PROCEDURE uspUpsertWBILendingTypes
 AS
 MERGE [WBILendingTypes] as target1
