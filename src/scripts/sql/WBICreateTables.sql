@@ -97,7 +97,9 @@ CREATE TABLE WBIIndicators
     SourceOrganization
         varchar(2048),
     Unit
-        varchar(10)
+        varchar(10),
+	InternalLastUpdatedUTC 
+		datetime
 )
 GO
 
