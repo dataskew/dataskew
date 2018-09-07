@@ -103,6 +103,31 @@ CREATE TABLE WBIIndicators
 )
 GO
 
+CREATE TABLE WBIIndicatorData
+(
+	IndicatorId
+		varchar(64)
+        not null
+        foreign key references WBIIndicators(Id),
+	CountryId
+        varchar(3)
+        not null
+        foreign key references WBICountries(Id),
+	IndicatorDataDate
+		datetime
+		not null,
+	IndicatorDataValue
+		decimal(18,10),
+	Unit
+		varchar(18),
+	ObsStatus
+		varchar(18),
+	IndicatorDataDecimal
+		decimal(18,10),
+	primary key (IndicatorId, CountryId, IndicatorDataDate)
+)
+GO
+
 CREATE TABLE WBILendingTypes
 (
     Id
@@ -226,6 +251,31 @@ CREATE TABLE WBIStaging_IncomeLevels
         unique,
     IncomeLevelValue
         varchar(64)
+)
+GO
+
+CREATE TABLE WBIStaging_IndicatorData
+(
+	IndicatorId
+		varchar(64)
+        not null
+        foreign key references WBIIndicators(Id),
+	CountryId
+        varchar(3)
+        not null
+        foreign key references WBICountries(Id),
+	IndicatorDataDate
+		datetime
+		not null,
+	IndicatorDataValue
+		decimal(18,10),
+	Unit
+		varchar(18),
+	ObsStatus
+		varchar(18),
+	IndicatorDataDecimal
+		decimal(18,10),
+	primary key (IndicatorId, CountryId, IndicatorDataDate)
 )
 GO
 
