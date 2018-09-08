@@ -114,7 +114,7 @@ CREATE TABLE WBIIndicatorData
         not null
         foreign key references WBICountries(Id),
 	IndicatorDataDate
-		datetime
+		varchar(18)
 		not null,
 	IndicatorDataValue
 		decimal(18,10),
@@ -265,7 +265,7 @@ CREATE TABLE WBIStaging_IndicatorData
         not null
         foreign key references WBICountries(Id),
 	IndicatorDataDate
-		datetime
+		varchar(18)
 		not null,
 	IndicatorDataValue
 		decimal(18,10),
