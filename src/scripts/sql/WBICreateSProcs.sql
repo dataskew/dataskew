@@ -100,6 +100,14 @@ MERGE [WBIIndicators] as target1
 			target1.Unit = staging1.Unit
 	WHEN NOT MATCHED BY TARGET THEN
 		INSERT
+		(
+			Id,
+			IndicatorName,
+			SourceId,
+			SourceNote,
+			SourceOrganization,
+			Unit
+		)
 		VALUES
 		(
 			Id,
