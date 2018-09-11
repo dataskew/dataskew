@@ -117,7 +117,7 @@ CREATE TABLE WBIIndicatorData
 		varchar(18)
 		not null,
 	IndicatorDataValue
-		decimal(18,10),
+		decimal(28,10),
 	Unit
 		varchar(18),
 	ObsStatus
@@ -268,7 +268,7 @@ CREATE TABLE WBIStaging_IndicatorData
 		varchar(18)
 		not null,
 	IndicatorDataValue
-		decimal(18,10),
+		decimal(28,10),
 	Unit
 		varchar(18),
 	ObsStatus
