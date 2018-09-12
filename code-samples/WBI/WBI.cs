@@ -7,13 +7,14 @@ namespace WBI
 {
     class WBI
     {
-        private static readonly string baseAddress = "https://dataskew.azure-api.net/api/Wbi";
+        private static readonly string baseAddress = "https://dataskew.azure-api.net/api/wbi";
         private static readonly string uriFetchLendingTypes = $"{baseAddress}/lendingtypes";
         private static readonly string uriFetchIncomeLevels = $"{baseAddress}/incomelevels";
         private static readonly string uriFetchRegions = $"{baseAddress}/regions";
         private static readonly string uriFetchCountries = $"{baseAddress}/countries";
         private static readonly string uriFetchSources = $"{baseAddress}/sources";
         private static readonly string uriFetchTopics = $"{baseAddress}/topics";
+        private static readonly string uriFetchIndicators = $"{baseAddress}/indicators";
 
         static readonly string continuationTokenQueryString = "continuationtoken";
 
@@ -55,6 +56,15 @@ namespace WBI
 
         static async Task FetchIndicatorsById()
         {
+            Console.WriteLine("Fetching Indicator with id = 1.1_ACCESS.ELECTRICITY.TOT");
+            Console.WriteLine("-------------------------------------------------------");
+
+            var response = await httpClient.GetStringAsync($"{uriFetchIndicators}/1.1_ACCESS.ELECTRICITY.TOT");
+            var token = JToken.Parse(response);
+            Console.WriteLine($"{token["id"]} : {token["name"]}");
+
+            WaitForUser();
+
             WaitForUser();
         }
 
@@ -146,6 +156,13 @@ namespace WBI
 
         static async Task FetchCountryById()
         {
+            Console.WriteLine("Fetching Country with id = ARG");
+            Console.WriteLine("------------------------------");
+
+            var response = await httpClient.GetStringAsync($"{uriFetchCountries}/ARG");
+            var token = JToken.Parse(response);
+            Console.WriteLine($"{token["id"]} : {token["name"]}");
+
             WaitForUser();
         }
 
@@ -241,12 +258,12 @@ namespace WBI
             await FetchAllLendingTypes();
             await FetchLendingTypesById();
             await FetchAllCountries();
-            //await FetchCountryById();
+            await FetchCountryById();
             //await FetchCountriesForLendingType();
             //await FetchCountriesForIncomeLevel();
             //await FetchCountriesForRegion();
             //await FetchAllIndicators();
-            //await FetchIndicatorsById();
+            await FetchIndicatorsById();
             //await FetchIndicatorsForSource();
             //await FetchIndicatorsForTopic();
             //await FetchIndicatorDataForCountry();
