@@ -1,5 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -26,31 +28,67 @@ namespace WBI
 
         static async Task FetchIndicatorDataForCountry()
         {
+            Console.WriteLine("Fetching data for Indicator '1.1_ACCESS.ELECTRICITY.TOT' for Country 'IND'");
+            Console.WriteLine("--------------------------------------------------------------------------");
+
+            var response = await httpClient.GetStringAsync($"{uriFetchCountries}/Ind/indicators/1.1_ACCESS.ELECTRICITY.TOT");
+            foreach (var token in JArray.Parse(response))
+            {
+                Console.WriteLine($"{token["date"]} : {token["value"]}");
+            }
+
             WaitForUser();
         }
 
-        static async Task FetchIndicatorsForTopic()
+        static Task FetchIndicatorsForTopic()
         {
-            WaitForUser();
+            throw new NotImplementedException();
         }
 
         static async Task FetchIndicatorsForSource()
         {
+            Console.WriteLine("Fetching Indicators for Source with id = 30");
+            Console.WriteLine("-------------------------------------------");
+
+            var response = await httpClient.GetStringAsync($"{uriFetchSources}/30/indicators");
+            foreach (var token in JArray.Parse(response))
+            {
+                Console.WriteLine($"{token["id"]} : {token["name"]}");
+            }
+
             WaitForUser();
         }
 
-        static async Task FetchCountriesForRegion()
+        static Task FetchCountriesForRegion()
         {
-            WaitForUser();
+            throw new NotImplementedException();
         }
 
         static async Task FetchCountriesForIncomeLevel()
         {
+            Console.WriteLine("Fetching countries for Income Level id = LMC");
+            Console.WriteLine("--------------------------------------------");
+
+            var response = await httpClient.GetStringAsync($"{uriFetchIncomeLevels}/LMC/countries");
+            foreach (var token in JArray.Parse(response))
+            {
+                Console.WriteLine($"{token["id"]} : {token["name"]}");
+            }
+
             WaitForUser();
         }
 
         static async Task FetchCountriesForLendingType()
         {
+            Console.WriteLine("Fetching countries for Lending Type id = IDB");
+            Console.WriteLine("--------------------------------------------");
+
+            var response = await httpClient.GetStringAsync($"{uriFetchLendingTypes}/IDB/countries");
+            foreach (var token in JArray.Parse(response))
+            {
+                Console.WriteLine($"{token["id"]} : {token["name"]}");
+            }
+
             WaitForUser();
         }
 
@@ -64,14 +102,42 @@ namespace WBI
             Console.WriteLine($"{token["id"]} : {token["name"]}");
 
             WaitForUser();
-
-            WaitForUser();
         }
 
-        static async Task FetchAllIndicators()
+        /// <remarks>
+        /// Demonstrates paging for large time-series datasets.
+        /// Note: There are 15000+ indicators, we'll only retrieve the first 2000 for this demo.
+        /// </remarks>
+        static async Task FetchFirst2500Indicators()
         {
-            Console.WriteLine("Fetching all Indicators");
-            Console.WriteLine("-----------------------");
+            Console.WriteLine("Fetching first 2000 Indicators");
+            Console.WriteLine("------------------------------");
+
+            var count = 0;
+            var continuationToken = string.Empty;
+            do
+            {
+                var uri = string.Concat(
+                    uriFetchIndicators,
+                    !string.IsNullOrWhiteSpace(continuationToken)
+                        ? $"?{continuationTokenQueryString}={continuationToken}"
+                        : string.Empty);
+
+                var response = await httpClient.GetAsync(uri);
+                var tokens = JArray.Parse(await response.Content.ReadAsStringAsync());
+                foreach (var token in tokens)
+                {
+                    Console.WriteLine($"{token["id"]} : {token["name"]}");
+                }
+
+                count += tokens.Count;
+
+                IEnumerable<string> headerValues = new List<string>();
+                continuationToken = response.Headers.TryGetValues(continuationTokenHeaderName, out headerValues)
+                    ? headerValues.First()
+                    : string.Empty;
+            }
+            while (!string.IsNullOrWhiteSpace(continuationToken) || count < 2000);
 
             WaitForUser();
         }
@@ -259,14 +325,14 @@ namespace WBI
             await FetchLendingTypesById();
             await FetchAllCountries();
             await FetchCountryById();
-            //await FetchCountriesForLendingType();
-            //await FetchCountriesForIncomeLevel();
+            await FetchCountriesForLendingType();
+            await FetchCountriesForIncomeLevel();
             //await FetchCountriesForRegion();
-            //await FetchAllIndicators();
+            await FetchFirst2500Indicators();
             await FetchIndicatorsById();
-            //await FetchIndicatorsForSource();
+            await FetchIndicatorsForSource();
             //await FetchIndicatorsForTopic();
-            //await FetchIndicatorDataForCountry();
+            await FetchIndicatorDataForCountry();
         }
     }
 }
